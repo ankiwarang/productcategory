@@ -1,0 +1,37 @@
+﻿@model List<productcatgory.Context.Product>
+@{
+    ViewBag.Title = "productlist";
+}
+
+<h2>productlist</h2>
+
+<table>
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Category Name</th>
+        <th>Action</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.productid</td>
+            <td>@item.productname</td>
+            <td>@item.categoryname</td>
+            <td>
+                <a href="@Url.Action("Delete",new { item.productid })" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>    
+    <a href="@Url.Action("productlist1")" class="btn btn-danger">1</a>
+    <a href="@Url.Action("productlist2")" class="btn btn-danger">2</a>
+    <a href="@Url.Action("productlist3")" class="btn btn-danger">3</a>
+    <a href="@Url.Action("productlist4")" class="btn btn-danger">4</a>
+    <a href="@Url.Action("productlist5")" class="btn btn-danger">5</a>
+    <a href="@Url.Action("productlist6")" class="btn btn-danger">6</a>
+    <a href="@Url.Action("productlist7")" class="btn btn-danger">7</a>
+    <a href="@Url.Action("productlist8")" class="btn btn-danger">8</a>
+    <a href="@Url.Action("productlist9")" class="btn btn-danger">9</a>
+    <a href="@Url.Action("productlist10")" class="btn btn-danger">10</a>

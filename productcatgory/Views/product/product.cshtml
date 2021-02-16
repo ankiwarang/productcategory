@@ -1,0 +1,36 @@
+﻿@model productcatgory.Context.Product
+@{
+    ViewBag.Title = "product";
+}
+
+<h2>product</h2>
+@using (Html.BeginForm("Addproduct", "product", FormMethod.Post))
+{
+<div class="container">
+    <div class="form-group">
+        <label>Product Name</label>
+        @Html.TextBoxFor(x => x.productname, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="categoryname">Category Name</label>
+        <select name="categoryname" id="categoryname">
+            <option value="bathing soap">bathing soap</option>
+            <option value="Shampoo">Shampoo</option>
+            <option value="Toothpaste">Toothpaste</option>
+            <option value="Toothbrush">Toothbrush</option>
+            <option value="Face wash">Face wash</option>
+            <option value="Face pack">Face pack</option>
+            <option value="Foam shaving cream">Foam shaving cream</option>
+            <option value="Gel Shaving cream">Gel Shaving cream</option>
+            <option value="Trimer">Trimer</option>
+            <option value="Cold Drink">Cold Drink</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+        <button type="button" class="btn">@Html.ActionLink("productlist", "productlist",  "product")</button>
+    </div>
+</div>
+}
